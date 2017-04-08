@@ -99,6 +99,8 @@ def grabexcellinks(url):
         if linkurl[-3:] == 'xls':
             print "That's an Excel sheet"
         	scrapespreadsheet(linkurl)
+        else:
+            print "Not scraping that!"
 
 #run the function we've just defined, with the variable we've just defined
 grabexcellinks(url)
