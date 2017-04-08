@@ -77,8 +77,9 @@ def scrapespreadsheet(XLS):
                 record[keys[column]] = str(sheet.row_values(rownumber)[column]) #this breaks because keys cannot be floats: you can use str(keys[column])
             id+=1
             record['id'] = id
+            record['url'] = str(XLS)
             print "---", record
-            scraperwiki.sqlite.save(['id'], record, table_name=sheetname) 
+            scraperwiki.sqlite.save([keys[2], 'url'], record, table_name=sheetname) 
 
 
 #define the URL we're going to scrape
